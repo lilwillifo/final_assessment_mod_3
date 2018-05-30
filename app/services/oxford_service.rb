@@ -7,6 +7,10 @@ class OxfordService
     conn.get("inflections/en/#{@input}")
   end
 
+  def results
+    JSON.parse(response.body, symbolize_names: true)[:results].first
+  end
+
   private
 
   def conn

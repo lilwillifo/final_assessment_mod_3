@@ -9,8 +9,7 @@ class Validation
   end
 
   def root
-    results = JSON.parse(service.response.body, symbolize_names: true)[:results].first
-    results[:lexicalEntries].first[:inflectionOf].first[:id]
+    service.results[:lexicalEntries].first[:inflectionOf].first[:id]
   end
 
   private
