@@ -6,50 +6,54 @@ describe 'Api::V1::Games' do
     let(:sal)  { User.create(id: 2, name: "Sal") }
     let(:game)  { Game.create(player_1: josh, player_2: sal) }
     it 'returns the game id and each users score as JSON' do
-      josh.plays.create(game: game, word: "sal", score: 3)
-      josh.plays.create(game: game, word: "zoo", score: 12)
-      sal.plays.create(game: game, word: "josh", score: 14)
-      sal.plays.create(game: game, word: "no", score: 2)
+      VCR.use_cassette('user_plays_valid_word') do
+        josh.plays.create(game: game, word: "sal", score: 3)
+        josh.plays.create(game: game, word: "zoo", score: 12)
+        sal.plays.create(game: game, word: "josh", score: 14)
+        sal.plays.create(game: game, word: "no", score: 2)
 
-      payload = {
-                  user_id: josh.id,
-                  word: 'at'
-                }
+        payload = {
+                    user_id: josh.id,
+                    word: 'at'
+                  }
 
-      post "/api/v1/games/#{game.id}/plays", params: payload
+        post "/api/v1/games/#{game.id}/plays", params: payload
 
-      expect(response.status).to eq(201)
+        expect(response.status).to eq(201)
 
-      get "/api/v1/games/#{game.id}"
+        get "/api/v1/games/#{game.id}"
 
-      expect(response.status).to eq(200)
+        expect(response.status).to eq(200)
 
-      game_response = JSON.parse(response.body, symbolize_names: true)
+        game_response = JSON.parse(response.body, symbolize_names: true)
 
-      expect(game_response.keys).to eq([:game_id, :scores])
-      expect(game_response[:game_id]).to eq(game.id)
-      expect(game_response[:scores]).to be_an Array
-      expect(game_response[:scores].first[:user_id]).to eq 1
-      expect(game_response[:scores].first[:score]).to eq 17
-      expect(game_response[:scores][1][:user_id]).to eq 2
-      expect(game_response[:scores][1][:score]).to eq 16
+        expect(game_response.keys).to eq([:game_id, :scores])
+        expect(game_response[:game_id]).to eq(game.id)
+        expect(game_response[:scores]).to be_an Array
+        expect(game_response[:scores].first[:user_id]).to eq 1
+        expect(game_response[:scores].first[:score]).to eq 17
+        expect(game_response[:scores][1][:user_id]).to eq 2
+        expect(game_response[:scores][1][:score]).to eq 16
+      end
     end
     it 'doesnt let a nonvalid word be played' do
-      josh.plays.create(game: game, word: "sal", score: 3)
-      josh.plays.create(game: game, word: "zoo", score: 12)
-      sal.plays.create(game: game, word: "josh", score: 14)
-      sal.plays.create(game: game, word: "no", score: 2)
+      VCR.use_cassette('invalidate_non_word') do
+        josh.plays.create(game: game, word: "sal", score: 3)
+        josh.plays.create(game: game, word: "zoo", score: 12)
+        sal.plays.create(game: game, word: "josh", score: 14)
+        sal.plays.create(game: game, word: "no", score: 2)
 
-      payload = {
-                  user_id: josh.id,
-                  word: 'foxez'
-                }
+        payload = {
+                    user_id: josh.id,
+                    word: 'foxez'
+                  }
 
-      post "/api/v1/games/#{game.id}/plays", params: payload
+        post "/api/v1/games/#{game.id}/plays", params: payload
 
-      expect(response.status).to eq(400)
-
-      expect(response.message).to eq('foxes is not a valid word.')
+        expect(response.status).to eq(400)
+        game_response = JSON.parse(response.body, symbolize_names: true)
+        expect(game_response[:message]).to eq('foxez is not a valid word.')
+      end
     end
   end
 end
