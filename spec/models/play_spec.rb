@@ -4,8 +4,10 @@ describe Play do
   context "Instance methods" do
     context "#score_word" do
       it "scores the word" do
-        play = create(:play, word: "assess")
-        expect(play.score).to eq(6)
+        VCR.use_cassette('user_plays_a_word') do
+          play = create(:play, word: "assess")
+          expect(play.score).to eq(6)
+        end
       end
     end
     context "#validate_word" do

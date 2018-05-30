@@ -19,11 +19,30 @@ class Play < ApplicationRecord
   def is_word?
     Validation.new(word).is_word?
   end
-  private
 
+  def status
+    if is_word?
+      201
+    else
+      400
+    end
+  end
+
+  def message
+    if is_word?
+      "#{word} was played."
+    else
+      "#{word} is not a valid word."
+    end
+  end
+  private
     def score_word
-      word.upcase.chars.map do |letter|
-        letter_scores[letter]
-      end.sum
+      if is_word?
+        word.upcase.chars.map do |letter|
+          letter_scores[letter]
+        end.sum
+      else
+        0
+      end
     end
 end

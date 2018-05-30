@@ -1,0 +1,803 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/sal
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '809'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "sal",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "sal",
+                                    "text": "sal"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "sal"
+                        }
+                    ],
+                    "word": "sal"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:55 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/zoo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '809'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "zoo",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "zoo",
+                                    "text": "zoo"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "zoo"
+                        }
+                    ],
+                    "word": "zoo"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:55 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/josh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '1848'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "josh",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Mass",
+                                    "type": "Countability"
+                                },
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "josh",
+                                    "text": "josh"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "josh"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Present",
+                                    "type": "Tense"
+                                },
+                                {
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                },
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "josh",
+                                    "text": "josh"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Verb",
+                            "text": "josh"
+                        }
+                    ],
+                    "word": "josh"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:55 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/no
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '3796'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "no",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Positive",
+                                    "type": "Degree"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Adverb",
+                            "text": "no"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Other",
+                            "text": "No"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Determiner",
+                            "text": "no"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Interjection",
+                            "text": "no"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "No"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "no"
+                        }
+                    ],
+                    "word": "no"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:55 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/sal
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:56 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '809'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "sal",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "sal",
+                                    "text": "sal"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "sal"
+                        }
+                    ],
+                    "word": "sal"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:56 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/zoo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:56 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '809'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "zoo",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "zoo",
+                                    "text": "zoo"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "zoo"
+                        }
+                    ],
+                    "word": "zoo"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:56 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/josh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:56 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '1848'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "josh",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Mass",
+                                    "type": "Countability"
+                                },
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "josh",
+                                    "text": "josh"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "josh"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Present",
+                                    "type": "Tense"
+                                },
+                                {
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                },
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "josh",
+                                    "text": "josh"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Verb",
+                            "text": "josh"
+                        }
+                    ],
+                    "word": "josh"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:56 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/no
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      App-Id:
+      - 4bcc64e4
+      App-Key:
+      - 14bf66c9afa02c325c727b4584b4d198
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 30 May 2018 17:54:56 GMT
+      Server:
+      - openresty/1.9.7.4
+      Version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '3796'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "metadata": {
+                "provider": "Oxford University Press"
+            },
+            "results": [
+                {
+                    "id": "no",
+                    "language": "en",
+                    "lexicalEntries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Positive",
+                                    "type": "Degree"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Adverb",
+                            "text": "no"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Other",
+                            "text": "No"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Determiner",
+                            "text": "no"
+                        },
+                        {
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Interjection",
+                            "text": "no"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "No"
+                        },
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "text": "Singular",
+                                    "type": "Number"
+                                }
+                            ],
+                            "inflectionOf": [
+                                {
+                                    "id": "no",
+                                    "text": "No"
+                                },
+                                {
+                                    "id": "no",
+                                    "text": "no"
+                                }
+                            ],
+                            "language": "en",
+                            "lexicalCategory": "Noun",
+                            "text": "no"
+                        }
+                    ],
+                    "word": "no"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 30 May 2018 17:54:56 GMT
+recorded_with: VCR 4.0.0

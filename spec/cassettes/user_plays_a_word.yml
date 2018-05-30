@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/foxes
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/assess
     body:
       encoding: US-ASCII
       string: ''
@@ -25,13 +25,13 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 30 May 2018 17:54:54 GMT
+      - Wed, 30 May 2018 17:55:23 GMT
       Server:
       - openresty/1.9.7.4
       Version:
       - v1.10.0-19-g9c8abf9
       Content-Length:
-      - '1667'
+      - '1142'
       Connection:
       - keep-alive
     body:
@@ -43,61 +43,44 @@ http_interactions:
             },
             "results": [
                 {
-                    "id": "foxes",
+                    "id": "assess",
                     "language": "en",
                     "lexicalEntries": [
                         {
                             "grammaticalFeatures": [
                                 {
-                                    "text": "Third",
-                                    "type": "Person"
-                                },
-                                {
-                                    "text": "Singular",
-                                    "type": "Number"
-                                },
-                                {
                                     "text": "Present",
                                     "type": "Tense"
+                                },
+                                {
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                },
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
                                 }
                             ],
                             "inflectionOf": [
                                 {
-                                    "id": "fox",
-                                    "text": "fox"
+                                    "id": "assess",
+                                    "text": "assess"
                                 }
                             ],
                             "language": "en",
                             "lexicalCategory": "Verb",
-                            "text": "foxes"
-                        },
-                        {
-                            "grammaticalFeatures": [
-                                {
-                                    "text": "Plural",
-                                    "type": "Number"
-                                }
-                            ],
-                            "inflectionOf": [
-                                {
-                                    "id": "fox",
-                                    "text": "fox"
-                                }
-                            ],
-                            "language": "en",
-                            "lexicalCategory": "Noun",
-                            "text": "foxes"
+                            "text": "assess"
                         }
                     ],
-                    "word": "foxes"
+                    "word": "assess"
                 }
             ]
         }
     http_version: 
-  recorded_at: Wed, 30 May 2018 17:54:54 GMT
+  recorded_at: Wed, 30 May 2018 17:55:23 GMT
 - request:
     method: get
-    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/foxes
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/assess
     body:
       encoding: US-ASCII
       string: ''
@@ -120,13 +103,13 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 30 May 2018 17:54:54 GMT
+      - Wed, 30 May 2018 17:55:23 GMT
       Server:
       - openresty/1.9.7.4
       Version:
       - v1.10.0-19-g9c8abf9
       Content-Length:
-      - '1667'
+      - '1142'
       Connection:
       - keep-alive
     body:
@@ -138,56 +121,39 @@ http_interactions:
             },
             "results": [
                 {
-                    "id": "foxes",
+                    "id": "assess",
                     "language": "en",
                     "lexicalEntries": [
                         {
                             "grammaticalFeatures": [
                                 {
-                                    "text": "Third",
-                                    "type": "Person"
-                                },
-                                {
-                                    "text": "Singular",
-                                    "type": "Number"
-                                },
-                                {
                                     "text": "Present",
                                     "type": "Tense"
+                                },
+                                {
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                },
+                                {
+                                    "text": "Transitive",
+                                    "type": "Subcategorization"
                                 }
                             ],
                             "inflectionOf": [
                                 {
-                                    "id": "fox",
-                                    "text": "fox"
+                                    "id": "assess",
+                                    "text": "assess"
                                 }
                             ],
                             "language": "en",
                             "lexicalCategory": "Verb",
-                            "text": "foxes"
-                        },
-                        {
-                            "grammaticalFeatures": [
-                                {
-                                    "text": "Plural",
-                                    "type": "Number"
-                                }
-                            ],
-                            "inflectionOf": [
-                                {
-                                    "id": "fox",
-                                    "text": "fox"
-                                }
-                            ],
-                            "language": "en",
-                            "lexicalCategory": "Noun",
-                            "text": "foxes"
+                            "text": "assess"
                         }
                     ],
-                    "word": "foxes"
+                    "word": "assess"
                 }
             ]
         }
     http_version: 
-  recorded_at: Wed, 30 May 2018 17:54:54 GMT
+  recorded_at: Wed, 30 May 2018 17:55:23 GMT
 recorded_with: VCR 4.0.0

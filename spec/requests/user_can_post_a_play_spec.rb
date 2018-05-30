@@ -6,7 +6,7 @@ describe 'Api::V1::Games' do
     let(:sal)   { User.create(id: 2, name: "Sal") }
     let(:game)  { Game.create(player_1: josh, player_2: sal) }
     it 'returns the game id and each users score as JSON' do
-      VCR.use_cassette('user_plays_valid_word') do
+      VCR.use_cassette('user_plays_word') do
         josh.plays.create(game: game, word: "sal", score: 3)
         josh.plays.create(game: game, word: "zoo", score: 12)
         sal.plays.create(game: game, word: "josh", score: 14)
@@ -37,7 +37,7 @@ describe 'Api::V1::Games' do
       end
     end
     it 'doesnt let a nonvalid word be played' do
-      VCR.use_cassette('invalidate_non_word') do
+      VCR.use_cassette('invalidate_a_non_word') do
         josh.plays.create(game: game, word: "sal", score: 3)
         josh.plays.create(game: game, word: "zoo", score: 12)
         sal.plays.create(game: game, word: "josh", score: 14)
