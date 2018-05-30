@@ -5,7 +5,7 @@ require 'rails_helper'
 
 describe 'As a guest user' do
   it 'I can validate words on the root page' do
-    VCR.use_cassette('validation_of_word') do
+    VCR.use_cassette('user_can_validate_word') do
       visit '/'
       word = 'foxes'
       fill_in :word, with: word
