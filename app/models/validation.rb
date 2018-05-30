@@ -10,14 +10,20 @@ class Validation
   end
 
   def is_word?
-    response = @conn.get("inflections/en/#{@input}")
-    if response.status == 200
-      true
-    else
-      false
-    end
+    response.status == 200
   end
 
+  def root
+    results = JSON.parse(response.body, symbolize_names: true)[:results].first
+    results[:lexicalEntries].first[:inflectionOf].first[:id]
+  end
+
+  private
+
+  def response
+    @conn.get("inflections/en/#{@input}")
+  end
+
+
 end
-# JSON.parse(response.body, symbolize_names: true)[:results]
 # GET /inflections/{source_lang}/{word_id} under the "Lemmatron" heading
