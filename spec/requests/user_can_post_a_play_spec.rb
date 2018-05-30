@@ -33,7 +33,6 @@ describe 'Api::V1::Games' do
       expect(game_response[:scores].first[:score]).to eq 17
       expect(game_response[:scores][1][:user_id]).to eq 2
       expect(game_response[:scores][1][:score]).to eq 16
-
     end
   end
 end
