@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Api::V1::Games' do
   context 'GET /api/v1/games/1' do
     let(:josh)  { User.create(id: 1, name: "Josh") }
-    let(:sal)  { User.create(id: 2, name: "Sal") }
+    let(:sal)   { User.create(id: 2, name: "Sal") }
     let(:game)  { Game.create(player_1: josh, player_2: sal) }
     it 'returns the game id and each users score as JSON' do
       VCR.use_cassette('user_plays_valid_word') do
