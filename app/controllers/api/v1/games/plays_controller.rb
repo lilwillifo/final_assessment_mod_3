@@ -1,8 +1,16 @@
 class Api::V1::Games::PlaysController < ApiController
   def create
-    game = Game.find(params[:game_id])
     player = User.find(params[:user_id])
-    player.plays.create(game: game, word: params[:word])
-    render status: 201, json: game
+    if invalid_word?
+      render status: 400, json: current_game, message: "params[:word] is not a valid word."
+    else
+      player.plays.create(game: current_game, word: params[:word])
+      render status: 201, json: current_game
+    end
+  end
+
+  private
+  def invalid_word?
+    
   end
 end

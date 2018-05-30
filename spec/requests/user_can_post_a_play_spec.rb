@@ -34,5 +34,22 @@ describe 'Api::V1::Games' do
       expect(game_response[:scores][1][:user_id]).to eq 2
       expect(game_response[:scores][1][:score]).to eq 16
     end
+    it 'doesnt let a nonvalid word be played' do
+      josh.plays.create(game: game, word: "sal", score: 3)
+      josh.plays.create(game: game, word: "zoo", score: 12)
+      sal.plays.create(game: game, word: "josh", score: 14)
+      sal.plays.create(game: game, word: "no", score: 2)
+
+      payload = {
+                  user_id: josh.id,
+                  word: 'foxez'
+                }
+
+      post "/api/v1/games/#{game.id}/plays", params: payload
+
+      expect(response.status).to eq(400)
+
+      expect(response.message).to eq('foxes is not a valid word.')
+    end
   end
 end
