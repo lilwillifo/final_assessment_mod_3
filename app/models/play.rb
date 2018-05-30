@@ -16,6 +16,9 @@ class Play < ApplicationRecord
     score_word
   end
 
+  def is_word?
+    Validation.new(word).is_word?
+  end
   private
 
     def score_word

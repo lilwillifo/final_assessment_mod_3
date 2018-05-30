@@ -8,5 +8,19 @@ describe Play do
         expect(play.score).to eq(6)
       end
     end
+    context "#validate_word" do
+      it 'validates if the input is a real word' do
+        VCR.use_cassette('user_plays_a_valid_word') do
+          play = create(:play, word: "foxes")
+          expect(play.is_word?).to eq(true)
+        end
+      end
+      it 'tells you if word is not real' do
+        VCR.use_cassette('user_plays_invalid_word') do
+          play = create(:play, word: "foxez")
+          expect(play.is_word?).to eq(false)
+        end
+      end
+    end
   end
 end
