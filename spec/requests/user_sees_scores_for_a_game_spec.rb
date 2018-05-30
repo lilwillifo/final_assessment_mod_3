@@ -12,13 +12,13 @@ describe 'Api::V1::Games' do
       sal.plays.create(game: game, word: "josh", score: 14)
       sal.plays.create(game: game, word: "no", score: 2)
 
-      response = get "/api/v1/games/#{game.id}"
+      get "/api/v1/games/#{game.id}"
 
-      expect(status).to eq(200)
+      expect(response.status).to eq(200)
       game_response = JSON.parse(response.body, symbolize_names: true)
 
-      expect(game_response.key).to eq([:game_id, :scores])
-      expect(game_response[:game_id]).to eq(1)
+      expect(game_response.keys).to eq([:game_id, :scores])
+      expect(game_response[:game_id]).to eq(game.id)
       expect(game_response[:scores]).to be_an Array
       expect(game_response[:scores].first[:user_id]).to eq 1
       expect(game_response[:scores].first[:score]).to eq 15
